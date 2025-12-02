@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
@@ -8,6 +9,4 @@ function styles() {
 }
 
 exports.default = styles;
-exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
-}
+
